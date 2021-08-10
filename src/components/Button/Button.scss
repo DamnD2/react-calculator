@@ -1,0 +1,38 @@
+.number, .operator, .reset, .equal, .null{
+	border: none;
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+}
+
+.number, .reset, .null{
+	background-color: #fff;
+}
+
+.operator{
+	color: blueviolet;
+}
+
+.operator, .number, .reset, .null{
+	&:hover{
+		background-color: #96949433;
+	}
+
+	&:active{
+		background-color: #b6b3b3b3;
+	}
+}
+
+.equal{
+	background-color: rgba(162, 71, 248, 0.3);
+
+	&:hover{
+		background-color: rgba(162, 71, 248, 0.5);
+	}
+
+	&:active{
+		background-color: rgba(162, 71, 248, 0.7);
+	}
+}
