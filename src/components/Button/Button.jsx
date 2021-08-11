@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 const Button = (props) => {
   const { buttonData } = props;
-  const { value } = buttonData;
-  const { type } = buttonData;
+  const { value, type } = buttonData;
 
   return (<button value={value} className={type} data-type={type}>{value}</button>);
 };

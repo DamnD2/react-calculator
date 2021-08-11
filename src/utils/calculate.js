@@ -5,7 +5,7 @@ const operatorTypeMap = {
   '*': (firstOperand, secondOperand) => firstOperand * secondOperand,
 };
 
-export default function (operator, firstOperand, secondOperand, maxResultFieldLength) {
+function calculate(operator, firstOperand, secondOperand, maxResultFieldLength) {
   const convertedFirstOperand = parseFloat(firstOperand);
   const convertedSecondOperand = parseFloat(secondOperand);
 
@@ -30,7 +30,7 @@ function numberLengthConversion(number, maxLength) {
   }
 
   if (result.toString().length > maxLength) {
-    const integerPartOfNumberLength = parseInt(result).toString().length;
+    const integerPartOfNumberLength = parseInt(result, 10).toString().length;
     const digits = (maxLength > integerPartOfNumberLength) ? maxLength - integerPartOfNumberLength : 0;
 
     return result.toFixed(digits);
@@ -38,3 +38,5 @@ function numberLengthConversion(number, maxLength) {
 
   return result;
 }
+
+export default calculate;

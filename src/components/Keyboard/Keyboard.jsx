@@ -29,8 +29,8 @@ export default class Keyboard extends React.Component {
         className='calculator__keyboard'
         role='button'
         tabIndex='0'
-        onClick={(event) => onClick(event.target.value)}
-        onKeyDown={(event) => onClick(event.target.value)}
+        onClick={(event) => onClick(event.target.closest('button'))}
+        onKeyDown={(event) => onClick(event.target.closest('button'))}
       >
         {this.getKeyboard()}
       </div>
